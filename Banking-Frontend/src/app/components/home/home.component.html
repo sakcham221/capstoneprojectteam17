@@ -1,0 +1,41 @@
+<div class="home-container">
+
+  <!-- Show this if user is NOT logged in -->
+  <ng-container *ngIf="!authService.isLoggedIn()">
+    <section class="hero">
+      <h1>🏦 Welcome to Banking Management System</h1>
+      <p class="tagline">Secure • Reliable • Easy to Use</p>
+    </section>
+
+    <div class="login-cards">
+      <mat-card class="login-card user" (click)="goToLogin('user')">
+        <mat-icon class="icon">person</mat-icon>
+        <h2>User Login</h2>
+        <p class="desc">Access your personal banking dashboard</p>
+      </mat-card>
+
+      <mat-card class="login-card manager" (click)="goToLogin('manager')">
+        <mat-icon class="icon">supervisor_account</mat-icon>
+        <h2>Manager Login</h2>
+        <p class="desc">Manage customer accounts and transactions</p>
+      </mat-card>
+
+      <mat-card class="login-card admin" (click)="goToLogin('admin')">
+        <mat-icon class="icon">admin_panel_settings</mat-icon>
+        <h2>Admin Login</h2>
+        <p class="desc">Configure system settings and roles</p>
+      </mat-card>
+    </div>
+  </ng-container>
+
+  <!-- Show this if user IS logged in -->
+  <ng-container *ngIf="authService.isLoggedIn()">
+    <section class="hero">
+      <h1>Hi {{authService.getUserInfo()?.fullName || 'User'}},</h1>
+      <p class="tagline">Welcome to Banking Services 🎉</p>
+      <p class="subtext">Your trusted partner in secure transactions and financial growth.</p>
+      <div class="welcome-image">
+      </div>
+    </section>
+  </ng-container>
+</div>

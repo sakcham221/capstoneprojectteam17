@@ -1,0 +1,31 @@
+<div class="admin-dashboard">
+  <h1 style="border-bottom: 2px solid #ccc; display: inline-block; padding-bottom: 5px;">
+    Admin Dashboard
+  </h1>  
+
+  <div class="card-grid">
+    <div class="feature-card" (click)="openCreateAdminDialog()">
+      <p>Create Admin</p>
+    </div>
+
+    <div class="feature-card" (click)="openCreateManagerDialog()">
+      <p>Create Manager</p>
+    </div>
+
+    <div class="feature-card" (click)="openCreateUserDialog()">
+      <p>Create User</p>
+    </div>
+
+    <div class="feature-card" (click)="openAssignManagerDialog()">
+      <p>Assign User to Manager</p>
+    </div>
+
+    <div class="feature-card" (click)="openAllTransactionsDialog()">
+      <p>View All Transactions</p>
+    </div>
+
+    <div class="feature-card" (click)="openUpdateAccountListDialog()">
+      <p>Update Account Status</p>
+    </div>
+  </div>
+</div>

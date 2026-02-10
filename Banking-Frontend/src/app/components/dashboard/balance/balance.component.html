@@ -1,0 +1,15 @@
+<div class="balance-container">
+  <mat-card>
+    <h3>Current Balance</h3>
+
+    <!-- Show numeric balance -->
+    <p class="balance-amount" *ngIf="typeof balance === 'number'">
+      ₹ {{ balance | number: '1.2-2' }}
+    </p>
+
+    <!-- Show any string message (loading, error, no account, etc.) -->
+    <p class="balance-status" *ngIf="typeof balance === 'string'">
+      {{ balance }}
+    </p>
+  </mat-card>
+</div>

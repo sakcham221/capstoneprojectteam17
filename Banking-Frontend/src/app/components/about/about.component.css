@@ -1,0 +1,16 @@
+.about-container {
+  display: flex;
+  justify-content: center;   /* horizontal center */
+  align-items: center;       /* vertical center */
+  min-height: 80vh;          /* take most of the screen height */
+  text-align: center;
+}
+
+.about-card {
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  background: #fff;
+}

@@ -1,0 +1,21 @@
+mat-card {
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  
+  table {
+    width: 100%;
+    margin-top: 20px;
+  }
+  
+  p {
+    text-align: center;
+    margin-top: 20px;
+    font-style: italic;
+    color: gray;
+  }
+  .table-container {
+    max-height: 400px;
+    overflow: auto; 
+  }

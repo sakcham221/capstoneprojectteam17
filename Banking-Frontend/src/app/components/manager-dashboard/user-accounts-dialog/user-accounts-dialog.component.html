@@ -1,0 +1,16 @@
+<h2 mat-dialog-title>User Accounts</h2>
+
+<mat-dialog-content>
+  <mat-list *ngIf="accounts.length > 0">
+    <mat-list-item *ngFor="let acc of accounts">
+      <div>
+        <strong>Account #: </strong>{{ acc.accountNumber }}<br>
+        <strong>Type:</strong> {{ acc.accountType }}<br>
+        <strong>Status:</strong> {{ acc.accountStatus }}<br>
+        <strong>Balance:</strong> ₹{{ acc.balance }}
+      </div>
+    </mat-list-item>
+  </mat-list>
+
+  <p *ngIf="accounts.length === 0">No accounts found for this user.</p>
+</mat-dialog-content>

@@ -1,0 +1,27 @@
+<h2 mat-dialog-title>Create Account</h2>
+
+<form [formGroup]="accountForm" (ngSubmit)="onSubmit()" mat-dialog-content>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Account Type</mat-label>
+    <mat-select formControlName="accountType">
+      <mat-option value="SAVINGS">SAVINGS</mat-option>
+      <mat-option value="CURRENT">CURRENT</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Initial Balance</mat-label>
+    <input matInput type="number" formControlName="balance">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill" class="full-width">
+    <mat-label>Remark</mat-label>
+    <input matInput formControlName="remark" placeholder="Optional" />
+  </mat-form-field>
+
+  <div mat-dialog-actions align="end">
+    <button mat-button type="button" (click)="dialogRef.close()">Cancel</button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="accountForm.invalid">Create</button>
+  </div>
+</form>

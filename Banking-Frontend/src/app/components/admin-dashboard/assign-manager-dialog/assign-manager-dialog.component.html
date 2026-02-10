@@ -1,0 +1,29 @@
+<mat-card>
+    <h2>Assign User to Manager</h2>
+  
+    <form [formGroup]="form" (ngSubmit)="onSubmit()">
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Select User</mat-label>
+        <mat-select formControlName="userId">
+          <mat-option *ngFor="let user of users" [value]="user.id">
+            {{ user.full_name }} (ID: {{ user.id }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline" class="full-width">
+        <mat-label>Select Manager</mat-label>
+        <mat-select formControlName="managerId">
+          <mat-option *ngFor="let manager of managers" [value]="manager.id">
+            {{ manager.full_name }} (ID: {{ manager.id }})
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <div class="actions">
+        <button mat-button mat-dialog-close>Cancel</button>
+        <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Assign</button>
+      </div>
+    </form>
+  </mat-card>
+  

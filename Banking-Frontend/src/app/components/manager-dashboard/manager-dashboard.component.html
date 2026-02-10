@@ -1,0 +1,23 @@
+<div class="manager-dashboard">
+  <h1 style="border-bottom: 2px solid #ccc; display: inline-block; padding-bottom: 5px;">
+    Manager Dashboard
+  </h1>  
+
+  <div class="card-grid">
+    <!-- <div class="feature-card" (click)="openCreateUserDialog()"> -->
+      <!-- <p>Create New User</p> -->
+    <!-- </div> -->
+
+    <div class="feature-card" (click)="promptUserIdAndOpenAccounts()">
+      <p>View All Accounts</p>
+    </div>
+
+    <div class="feature-card" (click)="promptUserIdAndOpenTransactions()">
+      <p>View All Transactions</p>
+    </div>
+
+    <div class="feature-card" (click)="promptUserIdAndCreateAccount()">
+      <p>Create Account</p>
+    </div>
+  </div>
+</div>

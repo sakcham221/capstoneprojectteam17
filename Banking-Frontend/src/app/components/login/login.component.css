@@ -1,0 +1,29 @@
+.login-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+  }
+  
+  .login-card {
+    width: 400px;
+    padding: 30px;
+    text-align: center;
+  }
+  
+  .full-width {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .register-link {
+    margin-top: 20px;
+    font-size: 14px;
+  }
+  
+  .register-link a {
+    margin-left: 5px;
+    color: #3f51b5;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+  

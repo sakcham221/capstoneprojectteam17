@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>Update Account Status</h2>
+
+<mat-dialog-content>
+  <mat-form-field class="full-width" appearance="outline">
+    <mat-label>Select Status</mat-label>
+    <mat-select [(value)]="selectedStatus">
+      <mat-option *ngFor="let status of statuses" [value]="status">{{ status }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-raised-button color="primary" (click)="onUpdate()" [disabled]="!selectedStatus">
+      Update
+    </button>
+  </mat-dialog-actions>
+</mat-dialog-content>

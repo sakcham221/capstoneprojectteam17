@@ -1,0 +1,22 @@
+<div class="profile-container">
+    <mat-card>
+      <h2>Update Profile</h2>
+  
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="full_name" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>New Password (optional)</mat-label>
+          <input matInput formControlName="password" type="password" />
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="profileForm.invalid">
+          Save Changes
+        </button>
+      </form>
+    </mat-card>
+  </div>
+  

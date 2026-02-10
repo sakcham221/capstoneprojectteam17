@@ -1,0 +1,36 @@
+<div class="register-container">
+    <mat-card class="register-card">
+      <h2>Create a New profile</h2>
+  
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="fullName" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Email</mat-label>
+          <input matInput formControlName="email" />
+        </mat-form-field>
+  
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Password</mat-label>
+          <input matInput formControlName="password" type="password" />
+        </mat-form-field>
+
+        <mat-form-field appearance="outline" class="full-width">
+          <mat-label>Role</mat-label>
+          <mat-select formControlName="role" [disabled]="!data?.role">
+            <mat-option *ngIf="data?.role === 'USER' || !data?.role" value="USER">User</mat-option>
+            <mat-option *ngIf="data?.role === 'MANAGER'" value="MANAGER">Manager</mat-option>
+            <mat-option *ngIf="data?.role === 'ADMIN'" value="ADMIN">Admin</mat-option>
+          </mat-select>
+        </mat-form-field>
+  
+        <button mat-raised-button color="primary" type="submit" [disabled]="registerForm.invalid">
+          Register
+        </button>
+      </form>
+    </mat-card>
+  </div>
+  

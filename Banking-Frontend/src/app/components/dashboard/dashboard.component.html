@@ -1,0 +1,53 @@
+<div class="user-dashboard">
+  <h2>Welcome, {{ userName }} 👋</h2>
+
+  <div class="create-account-box" *ngIf="!accountId">
+
+  <button
+    mat-raised-button
+    color="primary"
+    (click)="openCreateAccount()">
+
+    ➕ Create Bank Account
+
+  </button>
+
+  <p class="hint-text">
+    Do you want to create a new bank account? Click the button above to get started!
+  </p>
+
+</div>
+
+
+  <div class="card-grid">
+    <mat-card class="feature-card" (click)="goToFeature('deposit')">
+      <mat-icon>account_balance_wallet</mat-icon>
+      <p>Deposit</p>
+    </mat-card>
+
+    <mat-card class="feature-card" (click)="goToFeature('withdraw')">
+      <mat-icon>money_off</mat-icon>
+      <p>Withdraw</p>
+    </mat-card>
+
+    <mat-card class="feature-card" (click)="goToFeature('transfer')">
+      <mat-icon>compare_arrows</mat-icon>
+      <p>Transfer</p>
+    </mat-card>
+
+    <mat-card class="feature-card" (click)="goToFeature('balance')">
+      <mat-icon>account_balance</mat-icon>
+      <p>Check Balance</p>
+    </mat-card>
+
+    <mat-card class="feature-card" (click)="goToFeature('transactions')">
+      <mat-icon>receipt_long</mat-icon>
+      <p>Transactions</p>
+    </mat-card>
+
+    <!-- <mat-card class="feature-card" (click)="goToFeature('profile')">
+      <mat-icon>person</mat-icon>
+      <p>Update Profile</p>
+    </mat-card> -->
+  </div>
+</div>
