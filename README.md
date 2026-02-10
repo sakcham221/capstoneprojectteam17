@@ -20,6 +20,6 @@ for running the angular there can be two ways if you are using vs code then ypu 
 now it will run succesfully 
 
 by chance if you get any error in the application just right click and go to inspect you will find the error there and try to fix it out 
-and remenber errors give you more teaching than anything else so try to solve it by your own, if you don't have time limit. 
+and remember errors give you more teaching than anything else so try to solve it by your own, if you don't have time limit. 
 
 
